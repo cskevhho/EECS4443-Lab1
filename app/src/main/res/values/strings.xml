@@ -14,4 +14,9 @@
     <string name="register_title">Register</string>
     <string name="passwordAgain_title">Confirm Password</string>
     <string name="register_label">Register</string>
+    <string name="signin_label">Already have an account? Login now.</string>
+    <string name="welcome_title">WELCOME</string>
+    <string name="welcome_text">Welcome home, User!</string>
+    <string name="catdancing_gif">Cat Dancing GIF</string>
+    <string name="lets_party">Let\'s Party 🎉</string>
 </resources>
