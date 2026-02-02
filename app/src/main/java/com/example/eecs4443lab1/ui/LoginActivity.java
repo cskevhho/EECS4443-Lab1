@@ -56,8 +56,8 @@ public class LoginActivity extends AppCompatActivity {
 
         UserStore userStore = new UserStore(this);
 
-        TextView createAccLabel = findViewById(R.id.create_acc_label);
-        createAccLabel.setOnClickListener(v -> {
+        TextView createAccClickable = findViewById(R.id.create_acc_clickable);
+        createAccClickable.setOnClickListener(v -> {
             Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
             startActivity(intent);
         });

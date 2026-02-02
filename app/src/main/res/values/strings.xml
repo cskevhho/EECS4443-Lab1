@@ -1,13 +1,15 @@
 <resources>
     <string name="app_name">EECS4443 Lab 1</string>
+    <string name="existing_account_label">Already have an account?</string>
     <string name="cancel_label">Cancel</string>
     <string name="cat_dancing_gif">Cat Dancing GIF</string>
-    <string name="create_acc_label">Don\'t have an account? Sign up now.</string>
+    <string name="create_acc_label">Don\'t have an account?</string>
     <string name="confirm_password_visibility">Confirm password visibility</string>
     <string name="incorrect_login">Incorrect username or password.</string>
     <string name="lets_party">Let\'s Party 🎉</string>
     <string name="login_title">Login here</string>
     <string name="login_label">Login</string>
+    <string name="login_now_label"><u>Login now.</u></string>
     <string name="password_input">Password…</string>
     <string name="password_label">Password</string>
     <string name="passwordAgain_input">Confirm Password…</string>
@@ -15,8 +17,8 @@
     <string name="password_visibility">Password visibility</string>
     <string name="register_label">Register</string>
     <string name="remember_me_label">Remember me?</string>
-    <string name="sign_in_label">Already have an account? Login now.</string>
     <string name="sign_up_title">Sign Up</string>
+    <string name="sign_up_label"><u>Sign up now.</u></string>
     <string name="username_input">Username…</string>
     <string name="username_label">Username</string>
     <string name="welcome_title">WELCOME</string>

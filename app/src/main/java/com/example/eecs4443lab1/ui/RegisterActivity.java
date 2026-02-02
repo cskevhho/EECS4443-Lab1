@@ -42,7 +42,7 @@ public class RegisterActivity extends AppCompatActivity {
         passwordAgainVisibilityBtn = findViewById(R.id.passwordAgain_visibility_button);
         Button registerBtn = findViewById(R.id.register_btn);
         Button cancelBtn = findViewById(R.id.cancel_btn);
-        TextView signInLabel = findViewById(R.id.sign_in_label);
+        TextView signInClickable = findViewById(R.id.sign_in_clickable);
 
         UserStore userStore = new UserStore(this);
 
@@ -118,7 +118,7 @@ public class RegisterActivity extends AppCompatActivity {
             passwordAgainField.setText("");
         });
 
-        signInLabel.setOnClickListener(v -> {
+        signInClickable.setOnClickListener(v -> {
             Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
             startActivity(intent);
             finish();
