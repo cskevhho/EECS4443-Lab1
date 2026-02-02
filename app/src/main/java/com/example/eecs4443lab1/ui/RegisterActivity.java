@@ -25,7 +25,7 @@ public class RegisterActivity extends AppCompatActivity {
     private String getPasswordError(String password) {
         if (password.length() < MIN_PASSWORD_LENGTH) return getString(R.string.toast_password_too_short);
         if (!password.matches(".*\\d.*")) return getString(R.string.toast_password_missing_num);
-        if (!password.matches(".*[!@#$%^&*()_+\\-\\=\\[\\]{};':\"\\\\|,.<>/?].*"))
+        if (!password.matches(".*[!@#$%^&*()_+-=\\[\\]{};':\"\\\\|,.<>/?].*"))
             return getString(R.string.toast_password_missing_symbol);
         return null; // valid
     }
