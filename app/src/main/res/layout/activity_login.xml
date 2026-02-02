@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_main"
     tools:context=".ui.LoginActivity">
 
     <!-- Title -->
@@ -15,6 +16,9 @@
         android:text="@string/login_title"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="@color/secondary_color"
+        android:padding="16dp"
         app:layout_constraintBottom_toTopOf="@id/incorrect_login_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +31,9 @@
         android:layout_height="wrap_content"
         android:text="@string/incorrect_login"
         android:textSize="14sp"
-        android:textColor="#FF0000"
+        android:textColor="@color/white"
+        android:background="#36523a"
+        android:padding="12dp"
         app:layout_constraintBottom_toTopOf="@id/username_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,6 +46,7 @@
         android:layout_height="wrap_content"
         android:text="@string/username_label"
         android:textSize="16sp"
+        android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@id/incorrect_login_text"
         app:layout_constraintBottom_toTopOf="@id/username_text_field"
         app:layout_constraintStart_toStartOf="@id/username_text_field" />
@@ -53,6 +60,8 @@
         android:hint="@string/username_input"
         android:inputType="text"
         android:maxWidth="320dp"
+        android:backgroundTint="@color/white"
+        android:textColorHint="#36523a"
         app:layout_constraintBottom_toTopOf="@id/password_title"
         app:layout_constraintStart_toStartOf="@id/password_text_field"
         app:layout_constraintTop_toBottomOf="@id/username_title" />
@@ -64,6 +73,7 @@
         android:layout_height="wrap_content"
         android:text="@string/password_label"
         android:textSize="16sp"
+        android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@id/username_text_field"
         app:layout_constraintBottom_toTopOf="@id/password_text_field"
         app:layout_constraintStart_toStartOf="@id/password_text_field" />
@@ -77,6 +87,8 @@
         android:inputType="textPassword"
         android:hint="@string/password_input"
         android:layout_marginStart="48dp"
+        android:backgroundTint="@color/white"
+        android:textColorHint="#36523a"
         app:layout_constraintTop_toBottomOf="@id/password_title"
         app:layout_constraintBottom_toTopOf="@id/remember_checkbox"
         app:layout_constraintEnd_toStartOf="@id/password_visibility_button"
@@ -100,6 +112,7 @@
         android:id="@+id/remember_checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:buttonTint="@color/white"
         app:layout_constraintTop_toBottomOf="@id/password_text_field"
         app:layout_constraintBottom_toTopOf="@id/create_acc_label"
         app:layout_constraintStart_toStartOf= "@id/password_text_field" />
@@ -111,6 +124,7 @@
         android:layout_height="wrap_content"
         android:text="@string/remember_me_label"
         android:textSize="14sp"
+        android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@id/password_text_field"
         app:layout_constraintBottom_toTopOf="@id/create_acc_label"
         app:layout_constraintStart_toEndOf= "@id/remember_checkbox" />
@@ -122,6 +136,7 @@
         android:layout_height="wrap_content"
         android:text="@string/create_acc_label"
         android:textSize="14sp"
+        android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@id/remember_checkbox"
         app:layout_constraintBottom_toTopOf="@id/login_btn"
         app:layout_constraintEnd_toStartOf="@id/create_acc_clickable"
@@ -152,6 +167,7 @@
         android:layout_width="96dp"
         android:layout_height="48dp"
         android:text="@string/login_label"
+        android:backgroundTint="@color/secondary_color"
         app:layout_constraintTop_toBottomOf="@id/create_acc_label"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/cancel_btn"
@@ -165,6 +181,7 @@
         android:layout_height="48dp"
         android:text="@string/cancel_label"
         android:layout_marginStart="32dp"
+        android:backgroundTint="@color/secondary_color"
         app:layout_constraintTop_toBottomOf="@id/create_acc_label"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
