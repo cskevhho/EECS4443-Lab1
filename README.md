@@ -20,7 +20,7 @@ Simple login interface.
 **Minh Anh Nguyen** - 219116714
 - Created basic UI layouts for the register and welcome screens
 - Implemented register screen logic:
-  - Password validation
+  - Password policy implementation
 
 **An Vu** - 218207043
 - Created basic UI layout for the login screen
