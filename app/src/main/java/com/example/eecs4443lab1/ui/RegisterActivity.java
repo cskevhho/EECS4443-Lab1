@@ -39,14 +39,6 @@ public class RegisterActivity extends AppCompatActivity {
         return null; // valid password
     }
 
-//    private String getPasswordError(String password) {
-//        if (password.length() < MIN_PASSWORD_LENGTH) return getString(R.string.toast_password_too_short);
-//        if (!password.matches(".*\\d.*")) return getString(R.string.toast_password_missing_num);
-//        if (!password.matches(".*[!@#$%^&*()_+-=\\[\\]{};':\"\\\\|,.<>/?].*"))
-//            return getString(R.string.toast_password_missing_symbol);
-//        return null; // valid
-//    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
