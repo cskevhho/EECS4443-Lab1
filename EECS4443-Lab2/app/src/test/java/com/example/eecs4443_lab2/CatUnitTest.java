@@ -43,13 +43,8 @@ public class CatUnitTest {
     }
 
     @Test
-    public void catAdapter_constructor_handlesNullList() {
-        // Testing that nothing is thrown, adapter still expects non-null list passed in.
-        try {
-            new CatAdapter(null);
-            fail("Should throw NullPointerException");
-        } catch (NullPointerException e) {
-            // Comment to get rid of the yellow squiggle :)
-        }
+    public void catAdapter_constructor_handlesNullListGracefully() {
+        CatAdapter adapter = new CatAdapter(null);
+        assertEquals(0, adapter.getItemCount());
     }
 }

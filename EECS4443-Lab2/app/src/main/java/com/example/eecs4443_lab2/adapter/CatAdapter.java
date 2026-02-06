@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.eecs4443_lab2.R;
 import com.example.eecs4443_lab2.model.Cat;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /*
@@ -26,7 +27,7 @@ public class CatAdapter extends RecyclerView.Adapter<CatAdapter.ViewHolder> {
     private final List<Cat> cats;
 
     public CatAdapter(@NonNull List<Cat> cats) {
-        this.cats = cats;
+        this.cats = (cats != null) ? cats : new ArrayList<>();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
