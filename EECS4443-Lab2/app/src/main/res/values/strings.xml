@@ -3,4 +3,11 @@
     <string name="cat_party_welcome">Welcome to the Cat Party!</string>
     <string name="detail_image">Detailed description image</string>
     <string name="tile_image">Tile image</string>
+
+
+
+<!--  Cat Model and CatAdapter Strings  -->
+    <string name="cat_safe_title">This cat has no name! 😭 (None Found)</string>
+    <string name="cat_safe_description">This cat was too boring for a description! 😭 (None Found)</string>
+    <string name="cat_safe_image_id">We don\'t even know what this cat looks like! 😭 (None Found)</string>
 </resources>

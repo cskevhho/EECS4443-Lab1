@@ -35,7 +35,7 @@ public class CatUnitTest {
                 new Cat("Cat1", 1, "Desc1"),
                 new Cat("Cat2", 2, "Desc2")
         );
-        CatAdapter adapter = new CatAdapter(cats);
+        CatAdapter adapter = new CatAdapter(this, cats);
         assertEquals(2, adapter.getItemCount());
     }
 }
