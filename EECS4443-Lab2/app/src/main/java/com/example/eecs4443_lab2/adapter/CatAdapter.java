@@ -48,11 +48,10 @@ public class CatAdapter extends RecyclerView.Adapter<CatAdapter.ViewHolder> {
     }
 
     // NOTE: @NonNull is used to force a non-null return value to prevent null pointer exceptions.
-
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        // make the view holder
+        // make the view holder, inflate the item layout and return the inflated view holder
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_tile, parent, false);
         return new ViewHolder(view);
     }
@@ -60,6 +59,7 @@ public class CatAdapter extends RecyclerView.Adapter<CatAdapter.ViewHolder> {
     @NonNull
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        // bind the view holder to given data at int position
         Cat cat = cats.get(position);
 
         holder.titleView.setText(getSafeTitle(holder, cat));
@@ -68,7 +68,7 @@ public class CatAdapter extends RecyclerView.Adapter<CatAdapter.ViewHolder> {
         holder.imageView.setContentDescription(holder.titleView.getText()); //
     }
 
-    // The getter functions below are helper methods for null safety in onBindViewHolder. The codeblock would look terrible else how. - Kevin 20260206
+    // The getter functions below are helper methods for null safety in onBindViewHolder. The code block above would look terrible else how. - Kevin 20260206
     private String getSafeTitle(@NonNull ViewHolder holder, Cat cat) {
         if (cat != null && cat.getTitle() != null && !cat.getTitle().trim().isEmpty()) {
             return cat.getTitle();
