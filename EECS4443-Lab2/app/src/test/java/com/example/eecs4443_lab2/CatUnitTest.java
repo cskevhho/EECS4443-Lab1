@@ -5,37 +5,51 @@ import com.example.eecs4443_lab2.adapter.CatAdapter;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
-
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class CatUnitTest {
-// Testing the logic for Cat and CatAdapter here. - Kevin 20260206
-
 
     @Test
     public void catModel_gettersAndSetters_workCorrectly() {
-        Cat cat = new Cat("Title", 123, "Description");
-        assertEquals("Title", cat.getTitle());
+        Cat cat = new Cat("Kitty", 123, "Cute cat");
+        assertEquals("Kitty", cat.getTitle());
         assertEquals(123, cat.getImageResId());
-        assertEquals("Description", cat.getDescription());
+        assertEquals("Cute cat", cat.getDescription());
 
-        cat.setTitle("New Title");
+        cat.setTitle("Tom");
         cat.setImageResId(456);
-        cat.setDescription("New Description");
-
-        assertEquals("New Title", cat.getTitle());
+        cat.setDescription("Playful");
+        assertEquals("Tom", cat.getTitle());
         assertEquals(456, cat.getImageResId());
-        assertEquals("New Description", cat.getDescription());
+        assertEquals("Playful", cat.getDescription());
     }
 
     @Test
-    public void catAdapter_getItemCount_returnsCorrectSize() {
+    public void catModel_getSampleCats_returns15Items() {
+        List<Cat> cats = Cat.getSampleCats();
+        assertEquals(15, cats.size());
+        assertEquals("Whiskers", cats.get(0).getTitle());
+        assertEquals("Ruby", cats.get(14).getTitle());
+    }
+
+    @Test
+    public void catAdapter_getItemCount_nonEmptyList() {
         List<Cat> cats = Arrays.asList(
-                new Cat("Cat1", 1, "Desc1"),
-                new Cat("Cat2", 2, "Desc2")
+                new Cat("A", 1, "desc"),
+                new Cat("B", 2, "desc2")
         );
-        CatAdapter adapter = new CatAdapter(this, cats);
+        CatAdapter adapter = new CatAdapter(cats);
         assertEquals(2, adapter.getItemCount());
+    }
+
+    @Test
+    public void catAdapter_constructor_handlesNullList() {
+        // Testing that nothing is thrown, adapter still expects non-null list passed in.
+        try {
+            new CatAdapter(null);
+            fail("Should throw NullPointerException");
+        } catch (NullPointerException e) {
+            // Comment to get rid of the yellow squiggle :)
+        }
     }
 }
