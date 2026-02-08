@@ -104,7 +104,7 @@ public class CatAdapter extends RecyclerView.Adapter<CatAdapter.ViewHolder> {
             Intent intent = new Intent(v.getContext(), DetailActivity.class);
             intent.putExtra("image", cat.getImageResId());
             intent.putExtra("title", cat.getTitle());
-            intent.putExtra("description", cat.getDescription());
+            intent.putExtra("description", cat.getDetailedDescription());
             v.getContext().startActivity(intent);
         });
     }

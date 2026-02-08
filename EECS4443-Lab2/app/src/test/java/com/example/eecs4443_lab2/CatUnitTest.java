@@ -11,17 +11,20 @@ public class CatUnitTest {
 
     @Test
     public void catModel_gettersAndSetters_workCorrectly() {
-        Cat cat = new Cat("Kitty", 123, "Cute cat");
+        Cat cat = new Cat("Kitty", 123, "Cute cat", "Super cute cat");
         assertEquals("Kitty", cat.getTitle());
         assertEquals(123, cat.getImageResId());
         assertEquals("Cute cat", cat.getDescription());
+        assertEquals("Super cute cat", cat.getDetailedDescription());
 
         cat.setTitle("Tom");
         cat.setImageResId(456);
         cat.setDescription("Playful");
+        cat.setDetailedDescription("Really playful");
         assertEquals("Tom", cat.getTitle());
         assertEquals(456, cat.getImageResId());
         assertEquals("Playful", cat.getDescription());
+        assertEquals("Really playful", cat.getDetailedDescription());
     }
 
     @Test
@@ -35,8 +38,8 @@ public class CatUnitTest {
     @Test
     public void catAdapter_getItemCount_nonEmptyList() {
         List<Cat> cats = Arrays.asList(
-                new Cat("A", 1, "desc"),
-                new Cat("B", 2, "desc2")
+                new Cat("A", 1, "desc", "detailedDesc"),
+                new Cat("B", 2, "desc2", "detailedDesc2")
         );
         CatAdapter adapter = new CatAdapter(cats);
         assertEquals(2, adapter.getItemCount());
